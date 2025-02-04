@@ -6,4 +6,8 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\..\Core\TestConnector.Domain\TestConnector.Domain.csproj" />
+  </ItemGroup>
+
 </Project>
