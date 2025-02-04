@@ -1,0 +1,15 @@
+﻿services:
+  connector-api:
+    image: connector
+    container_name: connector
+    build:
+      context: src
+      dockerfile: Presentation/TestConnector.API/Dockerfile
+    ports:
+      - "8080:5025"  
+    networks:
+      - connector-dev
+      
+networks:
+  connector-dev:
+    driver: bridge
