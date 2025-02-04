@@ -7,5 +7,6 @@ public interface IRestTestConnector
 {
     // I have added soft, start and end parameters. The Bitfinex API uses these as the query parameters.
     Task<IEnumerable<Trade>> GetNewTradesAsync(string pair, int? maxCount, int? sort, DateTimeOffset? start, DateTimeOffset? end);
-    Task<IEnumerable<Candle>> GetCandleSeriesAsync(string pair, int periodInSec, DateTimeOffset? from, DateTimeOffset? to = null, long? count = 0);
+    // I also have added an optional sort parameter.
+    Task<IEnumerable<Candle>> GetCandleSeriesAsync(string pair, int periodInSec, int? sort, DateTimeOffset? from, DateTimeOffset? to, long? count);
 }
